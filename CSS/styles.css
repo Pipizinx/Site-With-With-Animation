@@ -1,0 +1,454 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.container1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+}
+
+.text1 {
+    font-size: 200px;
+}
+
+/* DIV DE TRÁS (ANIMADA) */
+.div1 {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    z-index: 1;
+
+    animation: girar 3s linear infinite, cor 3s infinite;
+}
+
+/* DIV DA FRENTE */
+.div2 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #16de63;
+    z-index: 2;
+
+    animation: girar2 3s linear infinite, cor2 3s infinite;
+}
+
+/* animação de rotação */
+@keyframes girar{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes girar2{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+
+/* animação de cor */
+@keyframes cor {
+   0% {background-color:#ff0000 ;}
+   25% {background-color:#ff2500 ;}
+   50% {background-color:#ff5000 ;}
+   75% {background-color:#ff7500 ;}
+   100% {background-color:#ffa000 ;}
+
+}
+
+@keyframes cor2 {
+   0% {background-color:#ffe850 ;}
+   25% {background-color:#f6ff00 ;}
+   50% {background-color:#cbff50 ;}
+   75% {background-color:#73ff00 ;}
+   100% {background-color:#50ff5f ;}
+
+}
+
+.container2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+}
+
+.text2 {
+    font-size: 200px;
+    margin-bottom: 600px;
+}
+
+.div3 {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    z-index: 1;
+
+    animation: escala 3s linear infinite, cor 3s infinite;
+}
+
+@keyframes escala {
+    0% {transform:scale(1) ;}
+    25% {transform:scale(1.37) ;}
+    50% {transform:scale(1.75) ;}
+    75% {transform:scale(1.37) ;}
+    100% {transform:scale(1.0) ;}
+
+}
+
+.container3 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+}
+
+.text3 {
+    font-size: 200px;
+    margin-bottom: 600px;
+}
+
+.div4 {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    z-index: 1;
+
+    animation: translateX 3s linear infinite, cor2 3s infinite;
+}
+
+
+/*--- X é o eixo horizontal ---*/
+
+@keyframes translateX {
+    0% {transform:translateX(0px) ;}
+    12.5% {transform:translateX(50px) ;}
+    25% {transform:translateX(100px) ;}
+    37.5% {transform:translateX(50px) ;}
+    50% {transform:translateX(0px) ;}
+    62.5% {transform:translateX(-50px) ;}
+    75% {transform:translateX(-100px) ;}
+    87.5% {transform:translateX(-50px) ;}
+    100% {transform:translateX(0px) ;}
+
+}
+
+/*--- Y é o eixo vertical ---*/
+
+/* @keyframes translateY {
+    0% {transform:translateY(0px) ;}
+    12.5% {transform:translateY(25px) ;}
+    25% {transform:translateY(50px) ;}
+    37.5% {transform:translateY(25px) ;}
+    50% {transform:translateY(0px) ;}
+    62.5% {transform:translateY(-25px) ;}
+    75% {transform:translateY(-50px) ;}
+    87.5% {transform:translateY(-25px) ;}
+    100% {transform:translateY(0px) ;}
+
+} */
+
+.container4 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+}
+
+.text4 {
+    font-size: 200px;
+    margin-bottom: 600px;
+}
+
+.div5 {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    z-index: 1;
+
+    animation: skewX 3s linear infinite, cor2 3s infinite;
+}
+
+
+/*--- X é o eixo horizontal ---*/
+
+@keyframes skewX {
+    0% {transform:skewX(0deg) ;}
+    12.5% {transform:skewX(20deg) ;}
+    25% {transform:skewX(40deg) ;}
+    37.5% {transform:skewX(20deg) ;}
+    50% {transform:skewX(0deg) ;}
+    62.5% {transform:skewX(-20deg) ;}
+    75% {transform:skewX(-40deg) ;}
+    87.5% {transform:skewX(-20deg) ;}
+    100% {transform:skewX(0deg) ;}
+
+}
+
+/* @keyframes skewY {
+    0% {transform:skewY(0deg) ;}
+    12.5% {transform:skewY(20deg) ;}
+    25% {transform:skewY(40deg) ;}
+    37.5% {transform:skewY(20deg) ;}
+    50% {transform:skewY(0deg) ;}
+    62.5% {transform:skewY(-20deg) ;}
+    75% {transform:skewY(-40deg) ;}
+    87.5% {transform:skewY(-20deg) ;}
+    100% {transform:skewY(0deg) ;}
+
+} */
+
+.scene {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 400px; /* câmera */
+
+}
+
+.text5 {
+    position: absolute;
+    font-size: 200px;
+    margin-bottom: 600px;
+}
+
+.cubo {
+    position: relative;
+    width: 150px;
+    height: 150px;
+
+    transform-style: preserve-3d; /* mantém 3D */
+    transform: rotateX(20deg) rotateY(30deg);
+    animation: girarCubo 5s linear infinite;
+}
+
+.face {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+
+    border: 2px solid white;
+    opacity: 0.9;
+}
+
+.front {
+    background: red;
+    transform: translateZ(75px);
+}
+
+.back {
+    background: blue;
+    transform: rotateY(180deg) translateZ(75px);
+}
+
+.right {
+    background: green;
+    transform: rotateY(90deg) translateZ(75px);
+}
+
+.left {
+    background: yellow;
+    transform: rotateY(-90deg) translateZ(75px);
+}
+
+.top {
+    background: purple;
+    transform: rotateX(90deg) translateZ(75px);
+}
+
+.bottom {
+    background: orange;
+    transform: rotateX(-90deg) translateZ(75px);
+}
+
+@keyframes girarCubo {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+.container5 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+}
+
+.text6 {
+    font-size: 200px;
+    margin-bottom: 1000px;
+}
+
+.div6 {
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1;
+    border-radius: 100%;
+
+    animation: girar3 3s linear infinite, cor3 3s infinite;
+}
+
+.div7 {
+    position: absolute;
+    width: 63%;
+    height: 90%;
+    background-color: #000;
+    z-index: 2;
+    border-radius: 100%;
+
+    animation: girar4 3s linear infinite, cor4 3s infinite;
+}
+
+.div8 {
+    position: absolute;
+    width: 56%;
+    height: 80%;
+    background-color: #fff;
+    z-index: 3;
+    border-radius: 100%;
+
+    animation: girar3 3s linear infinite, cor3 3s infinite;
+}
+
+.div9 {
+    position: absolute;
+    width: 49%;
+    height: 70%;
+    background-color: #000;
+    z-index: 4;
+    border-radius: 100%;
+
+    animation: girar4 3s linear infinite, cor4 3s infinite;
+}
+
+.div10 {
+    position: absolute;
+    width: 42%;
+    height: 60%;
+    background-color: #fff;
+    z-index: 5;
+    border-radius: 100%;
+
+    animation: girar3 3s linear infinite, cor3 3s infinite;
+}
+
+.div11 {
+    position: absolute;
+    width: 35%;
+    height: 50%;
+    background-color: #000;
+    z-index: 6;
+    border-radius: 100%;
+
+    animation: girar4 3s linear infinite, cor4 3s infinite;
+}
+
+.div12 {
+    position: absolute;
+    width: 28%;
+    height: 40%;
+    background-color: #fff;
+    z-index: 7;
+    border-radius: 100%;
+
+    animation: girar3 3s linear infinite, cor3 3s infinite;
+}
+
+.div13 {
+    position: absolute;
+    width: 21%;
+    height: 30%;
+    background-color: #000;
+    z-index: 8;
+    border-radius: 100%;
+
+    animation: girar4 3s linear infinite, cor4 3s infinite;
+}
+
+.div14 {
+    position: absolute;
+    width: 14%;
+    height: 20%;
+    background-color: #fff;
+    z-index: 9;
+    border-radius: 100%;
+
+    animation: girar3 3s linear infinite, cor3 3s infinite;
+}
+
+.div15 {
+    position: absolute;
+    width: 5%;
+    height: 10%;
+    background-color: #000;
+    z-index: 10;
+    border-radius: 500px;
+
+    animation: girar4 3s linear infinite, cor4 3s infinite;
+}
+
+@keyframes girar3{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes girar4{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes cor3 {
+   0% {background-color:#fff ;}
+   50% {background-color:#000 ;}
+   100% {background-color:#fff ;}
+
+}
+
+@keyframes cor4 {
+   0% {background-color:#000 ;}
+   50% {background-color:#fff ;}
+   100% {background-color:#000 ;}
+
+}
